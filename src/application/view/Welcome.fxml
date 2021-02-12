@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: cream;" styleClass="background-image" stylesheets="@../editPictures.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.WelcomeController">
+<BorderPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: cream;" styleClass="background-image" stylesheets="@../pictures.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.WelcomeController">
    <top>
       <Text fill="#b53d32" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Weiss App!" BorderPane.alignment="CENTER">
          <font>
@@ -21,7 +21,7 @@
       </Text>
    </top>
    <center>
-      <Text fill="#282525" stroke="#a19665" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info-text" text="This is a simple app allowing you to store paintings. &#10;You can Add, Edit and Display paintings. &#10;You can choose the shape from: circle, square, rectangle. &#10;You can see the painting data such as: title, author, size (width, height, radius), area, weight, and price. &#10;You can filter by title, author, area, price and weight. &#10;Also, you can sort paintings by price, title or author.&#10;&#10;To close the app, click the Cancel button. To continue, click the Next button." textAlignment="CENTER" wrappingWidth="852.12841796875" BorderPane.alignment="CENTER">
+      <Text fill="#282525" stroke="#a19665" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info-text" text="This is a simple app allowing you to store paintings. &#10;You can Add, Edit and Display paintings. &#10;You can choose the shape from: circle, square, rectangle. &#10;You can see the painting data such as: title, author, size (width, height, radius), area, weight, and price. &#10;You can filter by title, author, area, price and weight. &#10;Also, you can sort paintings.&#10;&#10;To close the app, click the Finish button. To continue, click the Next button." textAlignment="CENTER" wrappingWidth="852.12841796875" BorderPane.alignment="CENTER">
          <font>
             <Font name="Apple SD Gothic Neo Bold" size="28.0" />
          </font>
@@ -30,7 +30,7 @@
    <bottom>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" cancelButton="true" mnemonicParsing="false" prefWidth="130.0" text="Cancel" translateY="60.0">
+            <Button fx:id="cancelWelcomeButton" alignment="CENTER" cancelButton="true" mnemonicParsing="false" onAction="#onCancelWelcomeButton" prefWidth="130.0" text="Finish" translateY="30.0">
                <font>
                   <Font size="28.0" />
                </font>
@@ -41,12 +41,12 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&#10;Author: Małgorzata Rakowska&#10;Date: 13 February 2021&#10;Version: 1.0.0&#10;Purpose: PRP class in Warsaw University of Technology&#10;" translateX="150.0" translateY="15.0" wrappingWidth="473.4931640625">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Author: Małgorzata Rakowska&#10;Date: 13 February 2021&#10;Version: 1.0.0&#10;Purpose: PRP course in Warsaw University of Technology&#10;" translateX="150.0" translateY="8.0" wrappingWidth="473.4931640625">
                <font>
-                  <Font size="18.0" />
+                  <Font size="17.0" />
                </font>
             </Text>
-            <Button fx:id="welcomeNextButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#clickWelcomeNextButton" prefWidth="130.0" text="Next" translateX="230.0" translateY="40.0">
+            <Button fx:id="nextWelcomeButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#clickWelcomeNextButton" prefWidth="130.0" text="Next" translateX="230.0" translateY="10.0">
                <font>
                   <Font size="28.0" />
                </font>

@@ -10,26 +10,25 @@ public class Painting {
 	private StringProperty firstName;
 	private StringProperty lastName;
 	private StringProperty shape;
-	private StringProperty width;		
+	private StringProperty width;
 	private StringProperty height;
 	private StringProperty radius;
 	private StringProperty area;
 	private StringProperty weight;
 	private StringProperty price;
 
-	
 	public Painting() {
 		id = new SimpleStringProperty("0");
-		title = new SimpleStringProperty("");;
-		firstName = new SimpleStringProperty("");;
-		lastName = new SimpleStringProperty("");;
-		shape = new SimpleStringProperty("");;
-		width = new SimpleStringProperty("");;		
-		height = new SimpleStringProperty("");;
-		radius = new SimpleStringProperty("");;
-		area = new SimpleStringProperty("");;
-		weight = new SimpleStringProperty("");;
-		price = new SimpleStringProperty("");;
+		title = new SimpleStringProperty("");
+		firstName = new SimpleStringProperty("");
+		lastName = new SimpleStringProperty("");
+		shape = new SimpleStringProperty("");
+		width = new SimpleStringProperty("");
+		height = new SimpleStringProperty("");
+		radius = new SimpleStringProperty("");
+		area = new SimpleStringProperty("");
+		weight = new SimpleStringProperty("");
+		price = new SimpleStringProperty("");
 	}
 
 	public Painting(String paintingId) {
@@ -37,7 +36,6 @@ public class Painting {
 		this.id.set(paintingId);
 	}
 
-	
 	public String getPaintingId() {
 		return this.id.get();
 	}
@@ -45,12 +43,11 @@ public class Painting {
 	public void setPaintingId(String paintingId) {
 		this.id.set(paintingId);
 	}
-	
+
 	public StringProperty paintingIdProperty() {
 		return id;
 	}
-	
-	
+
 	public String getTitle() {
 		return this.title.get();
 	}
@@ -58,14 +55,13 @@ public class Painting {
 	public void setTitle(String title) {
 		this.title.set(title);
 	}
-	
+
 	public StringProperty titleProperty() {
 		return title;
 	}
 
-
 	public String getFirstName() {
-		return firstName.get();
+		return this.firstName.get();
 	}
 
 	public void setFirstName(String firstName) {
@@ -75,9 +71,9 @@ public class Painting {
 	public StringProperty firstNameProperty() {
 		return firstName;
 	}
-	
+
 	public String getLastName() {
-		return lastName.get();
+		return this.lastName.get();
 	}
 
 	public void setLastName(String lastName) {
@@ -87,9 +83,9 @@ public class Painting {
 	public StringProperty lastNameProperty() {
 		return lastName;
 	}
-	
+
 	public String getShape() {
-		return shape.get();
+		return this.shape.get();
 	}
 
 	public void setShape(String shape) {
@@ -99,9 +95,9 @@ public class Painting {
 	public StringProperty shapeProperty() {
 		return shape;
 	}
-	
+
 	public String getWidth() {
-		return width.get();
+		return this.width.get();
 	}
 
 	public void setWidth(String width) {
@@ -111,9 +107,9 @@ public class Painting {
 	public StringProperty widthProperty() {
 		return width;
 	}
-	
+
 	public String getHeight() {
-		return height.get();
+		return this.height.get();
 	}
 
 	public void setHeight(String height) {
@@ -123,9 +119,9 @@ public class Painting {
 	public StringProperty heightProperty() {
 		return height;
 	}
-	
+
 	public String getRadius() {
-		return radius.get();
+		return this.radius.get();
 	}
 
 	public void setRadius(String radius) {
@@ -135,7 +131,7 @@ public class Painting {
 	public StringProperty radiusProperty() {
 		return radius;
 	}
-	
+
 	public String getArea() {
 		return area.get();
 	}
@@ -147,7 +143,7 @@ public class Painting {
 	public StringProperty areaProperty() {
 		return area;
 	}
-	
+
 	public String getWeight() {
 		return weight.get();
 	}
@@ -159,9 +155,9 @@ public class Painting {
 	public StringProperty weightProperty() {
 		return weight;
 	}
-	
+
 	public String getPrice() {
-		return price.get();
+		return this.price.get();
 	}
 
 	public void setPrice(String price) {
@@ -171,7 +167,5 @@ public class Painting {
 	public StringProperty priceProperty() {
 		return price;
 	}
-	
-	
 
 }

@@ -8,45 +8,41 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class FileIO {
-	
-		
-		public ObservableList<Painting> getPaintings(String path) {
-			Scanner in=null;
-			ObservableList<Painting> paintings = FXCollections.observableArrayList();
 
-			try {
-				path = path != null ? path : "src/application/model/dal/sampleData.txt";
-				in=new Scanner(Paths.get(path));
+	public ObservableList<Painting> getPaintings(String path) {
+		Scanner in = null;
+		ObservableList<Painting> paintings = FXCollections.observableArrayList();
 
-				while(in.hasNext()) {
-					Painting painting = new Painting();
+		try {
+			path = path != null ? path : "src/application/model/dal/sampleData.txt";
+			in = new Scanner(Paths.get(path));
 
-					painting.setPaintingId(in.next());
-					painting.setTitle(in.next());
-					painting.setFirstName(in.next());
-					painting.setLastName(in.next());
-					painting.setShape(in.next());
-					painting.setWidth(in.next());
-					painting.setHeight(in.next());
-					painting.setRadius(in.next());
-					painting.setArea(in.next());
-					painting.setWeight(in.next());
-					painting.setPrice(in.next());
+			while (in.hasNext()) {
+				Painting painting = new Painting();
 
-					paintings.add(painting);
-					System.out.println("Wczytane dane");
+				painting.setPaintingId(in.next());
+				painting.setTitle(in.next());
+				painting.setFirstName(in.next());
+				painting.setLastName(in.next());
+				painting.setShape(in.next());
+				painting.setWidth(in.next());
+				painting.setHeight(in.next());
+				painting.setRadius(in.next());
+				painting.setArea(in.next());
+				painting.setWeight(in.next());
+				painting.setPrice(in.next());
 
-				}
+				paintings.add(painting);
 
-			} catch (IOException e) {
-				e.printStackTrace();
-			} finally {
-				if (in!= null) {
-					in.close();
-				}
 			}
-			// observableList return 
-			return paintings;
-		}
-	}
 
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (in != null) {
+				in.close();
+			}
+		}
+		return paintings;
+	}
+}
