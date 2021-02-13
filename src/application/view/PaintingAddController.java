@@ -1,6 +1,5 @@
 package application.view;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -62,11 +61,11 @@ public class PaintingAddController {
 	@FXML
 	private TextField priceTextField;
 
-	private Stage employeeEditStage;
+	private Stage paintingEditStage;
 
 	@FXML
-	public void setPaintingsStage(Stage employeeEditStage) {
-		this.employeeEditStage = employeeEditStage;
+	public void setPaintingsStage(Stage paintingEditStage) {
+		this.paintingEditStage = paintingEditStage;
 
 	}
 
@@ -86,7 +85,7 @@ public class PaintingAddController {
 		alert.setTitle("SAVE TITLE");
 		alert.setContentText(save.getText());
 		alert.show();
-		employeeEditStage.close();
+		paintingEditStage.close();
 
 	}
 
@@ -121,7 +120,7 @@ public class PaintingAddController {
 		System.out.println("ADD PAINTING SAVE");
 		// save to file
 		Scanner scanner;
-		int count = 0;
+		int count = 1;
 
 		try {
 			scanner = new Scanner(Paths.get("src/application/model/dal/sampleData.txt"));
@@ -182,6 +181,6 @@ public class PaintingAddController {
 
 	@FXML
 	void onClose(ActionEvent event) {
-        ((Node)(event.getSource())).getScene().getWindow().hide();
+		((Node) (event.getSource())).getScene().getWindow().hide();
 	}
 }

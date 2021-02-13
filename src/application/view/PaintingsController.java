@@ -1,6 +1,7 @@
 package application.view;
 
 import java.io.File;
+import java.util.Optional;
 
 import application.ViewLoader;
 import application.model.dal.FileIO;
@@ -10,17 +11,20 @@ import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Dialog;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class PaintingsController {
 
@@ -154,8 +158,10 @@ public class PaintingsController {
 		weightColumn.setCellValueFactory(cellData -> cellData.getValue().weightProperty());
 
 		priceColumn.setCellValueFactory(cellData -> cellData.getValue().priceProperty());
-
+		
+		
 	}
+	
 
 	public void setPaintings(ObservableList<Painting> paintings) {
 
@@ -186,16 +192,14 @@ public class PaintingsController {
 				if (painting.getTitle().toLowerCase().contains(lowerCaseFilter)) {
 					return true;
 				} else {
-				return false;
-				}}
-			);
+					return false;
+				}
+			});
 		});
-		
 
 		paintingTable.setItems(filteredData);
 
 	}
-
 
 	@FXML
 	private void deletePainting() {
@@ -237,8 +241,6 @@ public class PaintingsController {
 	@FXML
 	private void onAddPainting() {
 
-		Dialog alert = new Dialog();
-
 		Stage stage = new Stage();
 
 		ViewLoader<BorderPane, PaintingAddController> viewLoaderMain = new ViewLoader<>("view/PaintingAdd.fxml");
@@ -251,8 +253,6 @@ public class PaintingsController {
 
 	@FXML
 	private void onFilter() {
-		
-		
 
 		System.out.println("ONFILTER");
 

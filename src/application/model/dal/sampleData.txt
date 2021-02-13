@@ -8,5 +8,4 @@
 8 Test Test Test square 200 200 0 40000 4 20000
 9 Test Test Test circle 0 0 40 5027 3 60000
 10 Test Test Test rectangle 200 100 0 20000 6 35000 
-11 Test Test Test square 200 200 0 40000 4 20000
-12 Test Test Test circle 0 0 40 5027 3 60000
+11 Test test test square 0 0 0 0 0 0

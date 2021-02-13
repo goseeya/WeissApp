@@ -34,8 +34,6 @@ public class Main extends Application {
 
 		try {
 			ViewLoader<AnchorPane, PaintingsController> viewLoaderPain = new ViewLoader<>("view/Paintings.fxml");
-			AnchorPane anchorPane = viewLoaderPain.getLayout();
-
 			ViewLoader<BorderPane, MainController> viewLoaderMain = new ViewLoader<>("view/Main.fxml");
 			BorderPane borderPane = viewLoaderMain.getLayout();
 
