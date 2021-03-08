@@ -3,6 +3,7 @@
   <deploy>
     <application name="RakowskaWeissApp"/>
     <info/>
+    <intent description="Hey. A walk, gallery and/or some coffee? Not much to choose from these days, but anyway!" date="any" extras="Jokes and some other lovely stupidity"/>
   </deploy>
   <signjar/>
 </anttasks:AntTask>
